@@ -1,5 +1,5 @@
 import EmberRouter from '@ember/routing/router';
-import config from 'football-dashboard/config/environment';
+import config from 'foot-dash/config/environment';
 
 export default class Router extends EmberRouter {
   location = config.locationType;

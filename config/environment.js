@@ -2,8 +2,8 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'football-dashboard',
-    podModulPrefix: 'football-dashboard/_pods,',
+    modulePrefix: 'foot-dash',
+    podModulePrefix: 'foot-dash/_pods',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

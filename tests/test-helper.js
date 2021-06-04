@@ -1,5 +1,5 @@
-import Application from 'football-dashboard/app';
-import config from 'football-dashboard/config/environment';
+import Application from 'foot-dash/app';
+import config from 'foot-dash/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
