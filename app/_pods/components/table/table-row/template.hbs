@@ -1,0 +1,33 @@
+{{#if @route}}
+    <LinkTo @tagName="tr" @route={{@route}} @model={{@row}}>
+            <th scope="row">{{@row.name}}</th>
+            <td>{{@row.date}}</td>
+            {{#if @showPayment}}
+                <td>{{@row.payment}}</td>
+            {{/if}}
+                <td><span class="{{if @row.status " bg-primary" "bg-danger" }} badge text-white">{{if @row.status "success"
+                    "cancelled"}}</span></td>
+            {{#if @isEditable}}
+                <td>
+                    <LinkTo @route='subscribers.edit' @model={{@row}} class="btn btn-outline-primary">Edit</LinkTo>
+                </td>
+            {{/if}} 
+    </LinkTo>
+{{else}}
+    <tr>
+        <th scope="row">{{@row.name}}</th>
+        <td>{{@row.date}}</td>
+        {{#if @showPayment}}
+            <td>{{@row.payment}}</td>
+        {{/if}}
+            <td><span class="{{if @row.status " bg-primary" "bg-danger" }} badge text-white">{{if @row.status "success"
+                "cancelled"}}</span></td>
+        {{#if @isEditable}}
+            <td>
+                <LinkTo @route='subscribers.edit' @model={{@row}} class="btn btn-outline-primary">Edit</LinkTo>
+            </td>
+        {{/if}}
+    </tr>
+{{/if}} 
+
+

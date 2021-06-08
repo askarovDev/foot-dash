@@ -1,70 +1,72 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">SINOVUZ</div>
+    </a>
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">SINOVUZ</div>
-            </a>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <LinkTo @route="dashboard" class="nav-link" href="index.html">
+            <FaIcon @icon="home" />
+            <span>Dashboard</span>
+        </LinkTo>
+    </li>
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <LinkTo @route="dashboard" class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></LinkTo>
-            </li>
+    <li class="nav-item">
+        <LinkTo @route="subscribers" class="nav-link" href="#">
+            <FaIcon @icon="users" />
+            <span>Subscribers</span>
+        </LinkTo>
+    </li>
 
-            <li class="nav-item">
-                <LinkTo @route="subscribers" class="nav-link" href="#">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>Subscribers</span></LinkTo>
-            </li>
+    <li class="nav-item">
+        <LinkTo @route="payments" class="nav-link" href="#">
+            <FaIcon @icon="money-check-alt" />
+            <span>Payments</span>
+        </LinkTo>
+    </li>
 
-            <li class="nav-item">
-                <LinkTo @route="payments" class="nav-link" href="#">
-                    <i class="fas fa-fw fa-money-bill-alt"></i>
-                    <span>Payments</span></LinkTo>
-            </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <FaIcon @icon="futbol" />
+            <span>Football list</span></a>
+    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-futbol"></i>
-                    <span>Football list</span></a>
-            </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <FaIcon @icon="tasks" />
+            <span>Managers</span></a>
+    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-user-friends"></i>
-                    <span>Managers</span></a>
-            </li>
+    <hr class="sidebar-divider d-none d-md-block">
 
-            <hr class="sidebar-divider d-none d-md-block">
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <FaIcon @icon="cogs" />
+            <span>Settings</span></a>
+    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Settings</span></a>
-            </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <FaIcon @icon="user-check" />
+            <span>Subscription</span></a>
+    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-file-invoice-dollar"></i>
-                    <span>Subscription</span></a>
-            </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
+</ul>
+<!-- End of Sidebar -->

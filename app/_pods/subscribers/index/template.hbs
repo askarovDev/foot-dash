@@ -1,0 +1,34 @@
+{{page-title "Subscribers"}}
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Subscribers</h1>
+  </div>
+
+  <div class="row">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Registered date</th>
+          <th scope="col">Total payments</th>
+          <th scope="col">Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each this.rows as |row|}}
+          <Table::TableRow @row={{row}} @isEditable={{true}} @showPayment={{true}} />
+        {{/each}}
+      </tbody>
+
+
+    </table>
+  </div>
+
+</div>
+<!-- /.container-fluid -->

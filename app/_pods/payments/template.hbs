@@ -1,106 +1,36 @@
 {{page-title "Payments"}}
 <!-- Begin Page Content -->
-                <div class="container-fluid">
+<div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Payments</h1>
-                    </div>
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Payments</h1>
+  </div>
 
-                    <div class="row">
-                        <table class="table table-hover">
-                            <thead>
-                          <tr>
-                            <th scope="col">Subscriber name</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-success text-white">Success</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tom Cruise</th>
-                            <td>May 26, 2019 - 6:30 PM</td>
-                            <td><span class="badge bg-danger text-white">Cancelled</span></td>
-                          </tr>
-                        </tbody>
-                      
-                        </table>
-                    </div>
+  <div class="row">
+    <div class="col-8">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Subscriber name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each this.rows as |row|}}
+          <Table::TableRow @row={{row}} @route="payments.edit"/>
+          {{/each}}
+        </tbody>
 
-                </div>
-                <!-- /.container-fluid -->
+      </table>
+    </div>
+    <div class="col-4">
+      {{outlet}}
+    </div>
+
+
+  </div>
+
+</div>
+<!-- /.container-fluid -->
