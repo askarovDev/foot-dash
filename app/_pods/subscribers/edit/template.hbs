@@ -1,10 +1,35 @@
 <div class="card">
-  <div class="card-header">
-    Edit
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+    <div class="card-header">
+        Edit
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" id="inputName" class="form-control" aria-describedby="text">
+            </div>
+            <div class="col-3">
+                <label for="inputData" class="form-label">Data</label>
+                <input type="text" id="inputdata" class="form-control" aria-describedby="text">
+            </div>
+            <div class="col-3">
+                <label for="inputPayment" class="form-label">Payment</label>
+                <input type="text" id="</div>" class="form-control" aria-describedby="text">
+            </div>
+            <div class="col-3">
+                <label for="status" class="status-label">Status</label>
+                <div>
+                    <XToggle class="float-left" @theme='ios' @value={{this.toggled}} @onToggle={{fn (mut
+                        this.toggled)}} />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="card-footer">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
 </div>
