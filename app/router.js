@@ -14,4 +14,5 @@ Router.map(function () {
   this.route('payments', function() {
     this.route('edit', {path: '/:id'})
   });
+  this.route('edit');
 });

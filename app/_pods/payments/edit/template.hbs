@@ -1,10 +1,34 @@
 <div class="card">
-  <div class="card-header">
-    Edit
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+    <div class="card-header">
+        Edit
+    </div>
+    <div class="card-body">
+        
+            <div class="">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" value={{this.model.name}} id="inputName" class="form-control" aria-describedby="text">
+            </div>
+            <div class="">
+                <label for="inputData" class="form-label">Registered date</label>
+                <input type="text" value={{this.model.date}} id="inputdata" class="form-control" aria-describedby="text">
+            </div>
+            <div class="">
+                <label for="inputPayment" class="form-label">Payment</label>
+                <input type="text" value={{this.model.payment}} id="</div>" class="form-control" aria-describedby="text">
+            </div>
+            <div class="">
+                <label for="status" class="status-label">Status</label>
+
+                <div>
+                    <XToggle class="float-left" @theme='ios' @value={{this.model.status}} @onToggle={{fn (mut
+                        this.model.status)}} />
+                </div>
+            </div>
+        
+
+
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-primary">Save</button>
+    </div>
 </div>

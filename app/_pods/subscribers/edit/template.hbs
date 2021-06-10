@@ -6,21 +6,22 @@
         <div class="row">
             <div class="col-3">
                 <label for="inputName" class="form-label">Name</label>
-                <input type="text" id="inputName" class="form-control" aria-describedby="text">
+                <input type="text" value={{this.subscriber.name}} id="inputName" class="form-control" aria-describedby="text">
             </div>
             <div class="col-3">
-                <label for="inputData" class="form-label">Data</label>
-                <input type="text" id="inputdata" class="form-control" aria-describedby="text">
+                <label for="inputData" class="form-label">Registered date</label>
+                <input type="text" value={{this.subscriber.date}} id="inputdata" class="form-control" aria-describedby="text">
             </div>
             <div class="col-3">
                 <label for="inputPayment" class="form-label">Payment</label>
-                <input type="text" id="</div>" class="form-control" aria-describedby="text">
+                <input type="text" value={{this.subscriber.payment}} id="</div>" class="form-control" aria-describedby="text">
             </div>
             <div class="col-3">
                 <label for="status" class="status-label">Status</label>
+
                 <div>
-                    <XToggle class="float-left" @theme='ios' @value={{this.toggled}} @onToggle={{fn (mut
-                        this.toggled)}} />
+                    <XToggle class="float-left" @theme='ios' @value={{this.subscriber.status}} @onToggle={{fn (mut
+                        this.subscriber.status)}} />
                 </div>
             </div>
         </div>
@@ -28,8 +29,6 @@
 
     </div>
     <div class="card-footer">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <button {{on 'click' this.save}} class="btn btn-primary">Save</button>
     </div>
 </div>
