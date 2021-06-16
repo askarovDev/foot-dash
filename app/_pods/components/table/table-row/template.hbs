@@ -9,7 +9,7 @@
                     "cancelled"}}</span></td>
             {{#if @isEditable}}
                 <td>
-                    <LinkTo @route='subscribers.edit' @model={{@row}} class="btn btn-outline-primary">Edit</LinkTo>
+                    <LinkTo @route='main.subscribers.edit' @model={{@row}} class="btn btn-outline-primary">Edit</LinkTo>
                 </td>
             {{/if}} 
     </LinkTo>
@@ -24,7 +24,7 @@
                 "cancelled"}}</span></td>
         {{#if @isEditable}}
             <td>
-                <LinkTo @route='subscribers.edit' @model={{@row}} class="btn btn-outline-primary">Edit</LinkTo>
+                <LinkTo @route='main.subscribers.edit' @model={{@row}} class="btn btn-outline-primary">Edit</LinkTo>
             </td>
         {{/if}}
     </tr>

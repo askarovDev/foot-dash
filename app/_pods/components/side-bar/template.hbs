@@ -2,33 +2,33 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion {{if this.isToggled 'toggled'}}" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <LinkTo @route="main" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
             <FaIcon @icon="laugh-wink" @size="2x" />
         </div>
         <div class="sidebar-brand-text mx-3">SINOVUZ</div>
-    </a>
+    </LinkTo>
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <LinkTo @route="dashboard" class="nav-link" href="index.html">
+        <LinkTo @route="main.dashboard" class="nav-link" href="index.html">
             <FaIcon @icon="home" />
             <span>Dashboard</span>
         </LinkTo>
     </li>
 
     <li class="nav-item">
-        <LinkTo @route="subscribers" class="nav-link" href="#">
+        <LinkTo @route="main.subscribers" class="nav-link" href="#">
             <FaIcon @icon="users" />
             <span>Subscribers</span>
         </LinkTo>
     </li>
 
     <li class="nav-item">
-        <LinkTo @route="payments" class="nav-link" href="#">
+        <LinkTo @route="main.payments" class="nav-link" href="#">
             <FaIcon @icon="money-check-alt" />
             <span>Payments</span>
         </LinkTo>

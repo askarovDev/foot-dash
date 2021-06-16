@@ -3,7 +3,7 @@
 
     <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
+        <FaIcon @icon="bars" />
     </button>
 
     <!-- Topbar Search -->
@@ -107,24 +107,24 @@
             </dd.toggle>
             <dd.menu as |menu|>
                 <menu.item>
-                    <menu.link-to @route="dashboard">
-                        <FaIcon @icon="user" />
+                    <menu.link-to @route="main.profile">
+                        <FaIcon @icon="user" @size="0.75" />
                         Profile
                     </menu.link-to>
                 </menu.item>
                 <menu.item>
-                    <menu.link-to @route="dashboard">
+                    <menu.link-to @route="main.settings">
                                     <FaIcon @icon="cogs" />
 
                         Settings</menu.link-to>
                 </menu.item>
                 <menu.item>
-                    <menu.link-to @route="dashboard">
+                    <menu.link-to @route="main.activity-log">
                         Activity Log</menu.link-to>
                 </menu.item>
                 <menu.divider />
                 <menu.item>
-                    <menu.link-to @route="dashboard"> <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <menu.link-to @route="login"> <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout</menu.link-to>
                 </menu.item>
             </dd.menu>
