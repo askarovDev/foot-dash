@@ -1,7 +1,7 @@
 {{#if @route}}
     <LinkTo @tagName="tr" @route={{@route}} @model={{@row}}>
             <th scope="row">{{@row.name}}</th>
-            <td>{{@row.date}}</td>
+            <td>{{moment-format @row.date 'MM.DD.YYYY'}}</td>
             {{#if @showPayment}}
                 <td>{{@row.payment}}</td>
             {{/if}}
@@ -16,7 +16,7 @@
 {{else}}
     <tr>
         <th scope="row">{{@row.name}}</th>
-        <td>{{@row.date}}</td>
+        <td>{{moment-format @row.date 'MM.DD.YYYY'}}</td>
         {{#if @showPayment}}
             <td>{{@row.payment}}</td>
         {{/if}}

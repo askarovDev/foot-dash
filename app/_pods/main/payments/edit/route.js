@@ -7,7 +7,16 @@ export default class Edit extends Route {
     @service('data-base') db;
 
     model({ id }) {
-        return this.db.data.find((item) => item.id === id)
+        if (id === 'new') {
+            return this.store.createRecord('payment');
+          } else {
+            return this.store.findRecord('payment', id);
+          }
+    }
+
+    setupController(controller, model) {
+        super.setupController(...arguments)
+        controller.payment = model;
     }
    
 }

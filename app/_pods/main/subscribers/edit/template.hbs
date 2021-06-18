@@ -6,18 +6,15 @@
         <div class="row">
             <div class="col-3">
                 <label for="inputName" class="form-label">Name</label>
-                <input type="text" value={{this.subscriber.name}} id="inputName" class="form-control"
-                    aria-describedby="text">
+                <Input @type="text" @value={{this.subscriber.name}} id="inputName" class="form-control" />
             </div>
             <div class="col-3">
                 <label for="inputData" class="form-label">Registered date</label>
-                <input type="text" value={{this.subscriber.date}} id="inputdata" class="form-control"
-                    aria-describedby="text">
+                <Input @type="text" @value={{this.subscriber.date}} id="inputdata" class="form-control" />
             </div>
             <div class="col-3">
                 <label for="inputPayment" class="form-label">Payment</label>
-                <input type="text" value={{this.subscriber.payment}} id="</div>" class="form-control"
-                    aria-describedby="text">
+                <Input @type="number" @value={{this.subscriber.payment}} id="</div>" class="form-control" />
             </div>
             <div class="col-3">
                 <label for="status" class="status-label">Status</label>

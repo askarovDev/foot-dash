@@ -6,22 +6,22 @@
         
             <div class="">
                 <label for="inputName" class="form-label">Name</label>
-                <input type="text" value={{this.model.name}} id="inputName" class="form-control" aria-describedby="text">
+                <Input @type="text" @value={{this.payment.name}} id="inputName" class="form-control" />
             </div>
             <div class="">
                 <label for="inputData" class="form-label">Registered date</label>
-                <input type="text" value={{this.model.date}} id="inputdata" class="form-control" aria-describedby="text">
+                <Input @type="text" @value={{this.payment.date}} id="inputdata" class="form-control" />
             </div>
             <div class="">
                 <label for="inputPayment" class="form-label">Payment</label>
-                <input type="text" value={{this.model.payment}} id="</div>" class="form-control" aria-describedby="text">
+                <Input @type="text" @value={{this.payment.payment}} id="</div>" class="form-control" />
             </div>
             <div class="">
                 <label for="status" class="status-label">Status</label>
 
                 <div>
-                    <XToggle class="float-left" @theme='ios' @value={{this.model.status}} @onToggle={{ (mut
-                        this.model.status)}} />
+                    <XToggle class="float-left" @theme='ios' @value={{this.payment.status}} @onToggle={{ (mut
+                        this.payment.status)}} />
                 </div>
             </div>
         
@@ -29,6 +29,6 @@
 
     </div>
     <div class="card-footer">
-        <button class="btn btn-primary">Save</button>
+        <button {{on 'click' this.save}} class="btn btn-primary">Save</button>
     </div>
 </div>
