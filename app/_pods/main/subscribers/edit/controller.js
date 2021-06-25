@@ -10,4 +10,12 @@ export default class SubscribersEdit extends Controller {
         this.subscriber.save();
         this.transitionToRoute('main.subscribers');
     }
+
+    @action
+    delete() {
+        this.subscriber.destroyRecord().then(() => {
+            this.transitionToRoute('main.subscribers');
+        });
+
+    }
 }

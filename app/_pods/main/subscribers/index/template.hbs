@@ -23,7 +23,19 @@
       </thead>
       <tbody>
         {{#each this.rows as |row|}}
-          <Table::TableRow @row={{row}} @isEditable={{true}} @showPayment={{true}} />
+          <LinkTo @tagName="tr" @route="main.subscribers.edit" @model={{row}}>
+            <th scope="row">{{row.name}}</th>
+            <td>{{moment-format row.date 'DD.MM.YYYY'}}</td>
+            <td>{{total row.payments 'sum'}}</td>
+            <td>
+              <span class="{{if row.status " bg-primary" "bg-danger" }} badge text-white">
+                {{if row.status "active" "inactive"}}
+              </span>
+            </td>
+            <td>
+              <LinkTo @route='main.subscribers.edit' @model={{row}} class="btn btn-outline-primary">Edit</LinkTo>
+            </td>
+          </LinkTo>
         {{/each}}
       </tbody>
 

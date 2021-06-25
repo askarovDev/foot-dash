@@ -18,7 +18,7 @@
         <th scope="row">{{@row.name}}</th>
         <td>{{moment-format @row.date 'MM.DD.YYYY'}}</td>
         {{#if @showPayment}}
-            <td>{{@row.payment}}</td>
+            <td>{{this.totalPayments}}</td>
         {{/if}}
             <td><span class="{{if @row.status " bg-primary" "bg-danger" }} badge text-white">{{if @row.status "success"
                 "cancelled"}}</span></td>

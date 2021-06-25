@@ -10,4 +10,12 @@ export default class PaymentsEdit extends Controller {
         this.payment.save();
         this.transitionToRoute('main.payments');
     }
+
+    @action
+    delete() {
+        this.payment.destroyRecord().then(() => {
+            this.transitionToRoute('main.payments');
+        });
+
+    }
 }
